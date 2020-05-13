@@ -195,27 +195,27 @@ function draw(){
 function keyPressed(){
     if(keyCode === ENTER){
         chain.attach(ball1.body);
-        Matter.Body.setPosition(ball2.body,{x:300,y:375);
-        Matter.Body.setPosition(ball3.body,{x:250,y:375);
-        Matter.Body.setPosition(ball4.body,{x:100,y:375);
+        Matter.Body.setPosition(ball2.body,{x:300,y:375});
+        Matter.Body.setPosition(ball3.body,{x:250,y:375});
+        Matter.Body.setPosition(ball4.body,{x:100,y:375});
     }
     if(keyCode === 32){
         chain.reattach(ball2.body);
-        Matter.Body.setPosition(ball1.body,{x:175,y:375);
-        Matter.Body.setPosition(ball3.body,{x:250,y:375);
-        Matter.Body.setPosition(ball4.body,{x:100,y:375);
+        Matter.Body.setPosition(ball1.body,{x:175,y:375});
+        Matter.Body.setPosition(ball3.body,{x:250,y:375});
+        Matter.Body.setPosition(ball4.body,{x:100,y:375});
     }
     if(keyCode === SHIFT){
         chain.join(ball3.body);
-        Matter.Body.setPosition(ball1.body,{x:175,y:375);
-        Matter.Body.setPosition(ball2.body,{x:300,y:375);
-        Matter.Body.setPosition(ball4.body,{x:100,y:375);
+        Matter.Body.setPosition(ball1.body,{x:175,y:375});
+        Matter.Body.setPosition(ball2.body,{x:300,y:375});
+        Matter.Body.setPosition(ball4.body,{x:100,y:375});
     }
     if(keyCode === ALT){
         chain.rejoin(ball4.body);
-        Matter.Body.setPosition(ball1.body,{x:175,y:375);
-        Matter.Body.setPosition(ball2.body,{x:300,y:375);
-        Matter.Body.setPosition(ball3.body,{x:250,y:375);
+        Matter.Body.setPosition(ball1.body,{x:175,y:375});
+        Matter.Body.setPosition(ball2.body,{x:300,y:375});
+        Matter.Body.setPosition(ball3.body,{x:250,y:375});
     }
 }
 
