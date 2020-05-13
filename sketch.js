@@ -13,9 +13,9 @@ function setup(){
     world = engine.world;
 
     ball1 = new Ballgreen(400,100,50);
-    ball2 = new Ballred(300,375,50);
-    ball3 = new Ballblack(250,375,35);
-    ball4 = new Ballyellow(100,375,20);
+    ball2 = new Ballred(200,375,50);
+    ball3 = new Ballblack(120,375,35);
+    ball4 = new Ballyellow(30,375,20);
     ballholder = new Ground(390,170,30,20)
 
     ground = new Ground(500,380,1000,20);
@@ -195,27 +195,31 @@ function draw(){
 function keyPressed(){
     if(keyCode === ENTER){
         chain.attach(ball1.body);
-        Matter.Body.setPosition(ball2.body,{x:300,y:375});
-        Matter.Body.setPosition(ball3.body,{x:250,y:375});
-        Matter.Body.setPosition(ball4.body,{x:100,y:375});
+        Matter.Body.setPosition(ball1.body,{x:400,y:100});
+        Matter.Body.setPosition(ball2.body,{x:200,y:375});
+        Matter.Body.setPosition(ball3.body,{x:120,y:375});
+        Matter.Body.setPosition(ball4.body,{x:30,y:375});
     }
     if(keyCode === 32){
         chain.reattach(ball2.body);
-        Matter.Body.setPosition(ball1.body,{x:175,y:375});
-        Matter.Body.setPosition(ball3.body,{x:250,y:375});
-        Matter.Body.setPosition(ball4.body,{x:100,y:375});
+        Matter.Body.setPosition(ball1.body,{x:290,y:375});
+        Matter.Body.setPosition(ball2.body,{x:400,y:100});
+        Matter.Body.setPosition(ball3.body,{x:120,y:375});
+        Matter.Body.setPosition(ball4.body,{x:30,y:375});
     }
     if(keyCode === SHIFT){
         chain.join(ball3.body);
-        Matter.Body.setPosition(ball1.body,{x:175,y:375});
-        Matter.Body.setPosition(ball2.body,{x:300,y:375});
-        Matter.Body.setPosition(ball4.body,{x:100,y:375});
+        Matter.Body.setPosition(ball1.body,{x:290,y:375});
+        Matter.Body.setPosition(ball2.body,{x:200,y:375});
+        Matter.Body.setPosition(ball3.body,{x:400,y:100});
+        Matter.Body.setPosition(ball4.body,{x:30,y:375});
     }
     if(keyCode === ALT){
         chain.rejoin(ball4.body);
-        Matter.Body.setPosition(ball1.body,{x:175,y:375});
-        Matter.Body.setPosition(ball2.body,{x:300,y:375});
-        Matter.Body.setPosition(ball3.body,{x:250,y:375});
+        Matter.Body.setPosition(ball1.body,{x:290,y:375});
+        Matter.Body.setPosition(ball2.body,{x:200,y:375});
+        Matter.Body.setPosition(ball3.body,{x:120,y:375});
+        Matter.Body.setPosition(ball4.body,{x:400,y:100});
     }
 }
 
