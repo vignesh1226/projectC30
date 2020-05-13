@@ -196,29 +196,17 @@ function keyPressed(){
     if(keyCode === ENTER){
         chain.attach(ball1.body);
         Matter.Body.setPosition(ball1.body,{x:400,y:100});
-        Matter.Body.setPosition(ball2.body,{x:200,y:375});
-        Matter.Body.setPosition(ball3.body,{x:120,y:375});
-        Matter.Body.setPosition(ball4.body,{x:30,y:375});
     }
     if(keyCode === 32){
         chain.reattach(ball2.body);
-        Matter.Body.setPosition(ball1.body,{x:290,y:375});
         Matter.Body.setPosition(ball2.body,{x:400,y:100});
-        Matter.Body.setPosition(ball3.body,{x:120,y:375});
-        Matter.Body.setPosition(ball4.body,{x:30,y:375});
-    }
+     }
     if(keyCode === SHIFT){
         chain.join(ball3.body);
-        Matter.Body.setPosition(ball1.body,{x:290,y:375});
-        Matter.Body.setPosition(ball2.body,{x:200,y:375});
         Matter.Body.setPosition(ball3.body,{x:400,y:100});
-        Matter.Body.setPosition(ball4.body,{x:30,y:375});
     }
     if(keyCode === ALT){
         chain.rejoin(ball4.body);
-        Matter.Body.setPosition(ball1.body,{x:290,y:375});
-        Matter.Body.setPosition(ball2.body,{x:200,y:375});
-        Matter.Body.setPosition(ball3.body,{x:120,y:375});
         Matter.Body.setPosition(ball4.body,{x:400,y:100});
     }
 }
